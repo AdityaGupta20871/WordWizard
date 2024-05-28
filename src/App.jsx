@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import Wordle from './components/Wordle'
 
@@ -23,3 +24,5 @@ function App() {
 }
 
 export default App
+
+
