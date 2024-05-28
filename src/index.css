@@ -30,7 +30,6 @@ body.dark-mode {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #282c34; /* Dark background color */
   color: white; /* Text color */
 }
 
