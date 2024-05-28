@@ -9,7 +9,6 @@ const useWordle = (solution) => {
   const [isCorrect, setIsCorrect] = useState(false)
   const [usedKeys, setUsedKeys] = useState({}) 
 
-  
   const formatGuess = () => {
     let solutionArray = [...solution]
     let formattedGuess = [...currentGuess].map((l) => {
@@ -23,7 +22,7 @@ const useWordle = (solution) => {
       }
     })
     
-    
+    // find any yellow letters
     formattedGuess.forEach((l, i) => {
       if (solutionArray.includes(l.key) && l.color !== 'green') {
         formattedGuess[i].color = 'yellow'
@@ -73,10 +72,10 @@ const useWordle = (solution) => {
     setCurrentGuess('')
   }
 
-  
+
   const handleKeyup = ({ key }) => {
     if (key === 'Enter') {
-      
+      // only add guess if turn is less than 5
       if (turn > 5) {
         console.log('you used all your guesses!')
         return
